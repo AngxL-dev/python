@@ -1,0 +1,17 @@
+calculadora = int(input("Digite o primeiro número: "))
+operacao = input("Digite a operação (+ (soma), - (subtracao), * (vezes), / (dividir)): ")
+calculadora2 = int(input("Digite o segundo número: ")) 
+
+if operacao == "+":
+    resultado = calculadora + calculadora2
+    print(f"O resultado é: {resultado}")
+elif operacao == "-":
+    resultado = calculadora - calculadora2
+    print(f"O resultado é: {resultado}")
+elif operacao == "*":
+    resultado = calculadora * calculadora2
+    print(f"O resultado é: {resultado}")
+elif operacao == "/":
+    if calculadora2 != 0:
+        resultado = calculadora / calculadora2
+        print(f"O resultado é: {resultado}")
