@@ -1,0 +1,48 @@
+nome = input("Digite seu nome: ")
+print(f"seja bem vindo{nome}")
+
+print("O que gostaria de fazer?")
+
+print("1- Calculadora")
+print("2- Conversor de moedas")
+print("3- Conversor de tempo")
+print("4- Sair")
+
+opcao = int(input("Digite a opção desejada: "))
+
+if opcao == 1:
+    calculadora = int(input("Digite o primeiro número: "))
+    operacao = input("Digite a operação (+ (soma), - (subtracao), * (vezes), / (dividir)): ")
+    calculadora2 = int(input("Digite o segundo número: ")) 
+
+    if operacao == "+":
+        resultado = calculadora + calculadora2
+        print(f"O resultado é: {resultado}")
+    elif operacao == "-":
+        resultado = calculadora - calculadora2
+        print(f"O resultado é: {resultado}")
+    elif operacao == "*":
+        resultado = calculadora * calculadora2
+        print(f"O resultado é: {resultado}")
+    elif operacao == "/":
+        if calculadora2 != 0:
+            resultado = calculadora / calculadora2
+            print(f"O resultado é: {resultado}")
+        else:
+            print("Erro: Divisão por zero não é permitida.")
+elif opcao == 2:
+        print("Conversor de moedas selecionado.")
+        reais = float(input("Digite o valor em reais: "))
+        dolar = reais / 5.25
+        print(f"O valor em dólares é: {dolar:.2f}")
+elif opcao == 3:
+        print("Conversor de tempo selecionado.")
+        horas = int(input("Digite o valor em horas: "))
+        minutos = horas * 60
+        segundos = horas * 3600
+        print(f"O valor em minutos é: {minutos} minutos")
+        print(f"O valor em segundos é: {segundos} segundos")
+elif opcao == 4:
+        print("Saindo do programa. Até mais!")
+elif opcao < 1 or opcao > 4:
+        print("Opção inválida. Por favor, tente novamente.")               
